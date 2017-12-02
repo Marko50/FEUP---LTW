@@ -15,7 +15,7 @@
          <ul>
            <li> <a href= "addTODOlist.php" id="addTodoList"> Create a new TODO List </a></li>
            <li> <a href= "myTODOLists.php" id="addTodoList"> My TODO Lists </a></li>
-           <li><a href= "editprofile.php" id="editprofile"> Edit my Profile </a> </li>
+           <li><a href= "editprofilesec.php" id="editprofile"> Edit my Profile </a> </li>
          </ul>
        </nav>
      </div>

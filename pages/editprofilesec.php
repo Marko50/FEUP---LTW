@@ -1,15 +1,20 @@
-<?php include_once 'topBar.php'?>
+<?php
+  session_start();
+  include_once 'topBar.php'
+
+?>
 
 <html>
   <head>
-      <title> LOGIN </title>
+      <title> TO DO LISTS </title>
       <script src="../js/loginValidator.js" defer></script>
       <meta charset="utf-8">
   </head>
   <body>
-    <div class="form" action="../phpUtils/login.php">
-      <h3> Login information</h3>
-      <form method="post" action="../phpUtils/login.php">
+    <div class="form">
+      <h3> CREDENTIALS </h3>
+      <P> As a security manager you have to enter your credentials again to change any account information!</P>
+      <form method="post" action="editprofile.php">
         Username <input type="text" name="username" id="username">
         Password <input type="password" name="password" id="password">
         <input type="submit" value="Send" >
