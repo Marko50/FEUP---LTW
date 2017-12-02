@@ -1,3 +1,4 @@
+<?php include_once 'topBar.php'?>
 <!DOCTYPE html>
 <html>
   <head>
@@ -6,11 +7,10 @@
     <meta charset="utf-8">
   </head>
   <body>
-    <?php include_once 'topBar.php'?>
     <h1> CREATING AN ACCOUNT</h1>
-    <div>
+    <div class="registerform">
       <h3> Account information</h3>
-      <form action="register.php" method="post">
+      <form action="../phpUtils/register.php" method="post">
         Full Name <input type="text" name="FullName" id="FullName" maxlength="50" required>
         Email <input type="email" name="email" id="email" maxlength="30" required>
         Username <input type="text" name="username" id="username" maxlength="15" required>
@@ -22,6 +22,9 @@
         Birthdate <input type="date" name="birthdate" value="1997-04-09" required>
         <input type="submit" value="Send" >
       </form>
+    </div>
+    <div id="errors" class="error-forms"role="alert">
+
     </div>
     <footer>
       Copyright: TODOLists.org

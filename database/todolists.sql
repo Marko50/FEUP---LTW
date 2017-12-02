@@ -11,7 +11,7 @@ CREATE TABLE user (
   username VARCHAR NOT NULL UNIQUE,
 	fullName VARCHAR,
   email VARCHAR,
-	birthDate VARCHAR,
+	birthdate VARCHAR,
 	gender VARCHAR,
   password VARCHAR NOT NULL
 );

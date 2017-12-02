@@ -1,7 +1,7 @@
-
 <?php
+  include_once('config.php');
   $username= $_POST['username'];
-  $dbh = new PDO('sqlite:../database/todolists.db');
+  global $dbh;
   $stmt = $dbh->prepare('SELECT * FROM user WHERE username = ?');
   $stmt->execute(array($username));
 
