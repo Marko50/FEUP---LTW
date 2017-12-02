@@ -1,10 +1,20 @@
 CREATE TABLE todolist(
   todoListID INTEGER PRIMARY KEY AUTOINCREMENT,
-  list TEXT NOT NULL,
   likes INTEGER,
   uID INTEGER REFERENCES user(userID)
 );
 
+CREATE TABLE item(
+  itemID INTEGER PRIMARY KEY AUTOINCREMENT,
+  description TEXT NOT NULL,
+  completed BOOLEAN
+);
+
+CREATE TABLE todolistitem(
+  iID REFERENCES item (itemID),
+  tID REFERENCES todolist (todoListID),
+  PRIMARY KEY(itemID, todoListID)
+);
 
 CREATE TABLE user (
 	userID INTEGER PRIMARY KEY AUTOINCREMENT,
