@@ -1,5 +1,5 @@
 <?php
-  include_once('config.php');
+  include_once('../phpUtils/config.php');
 
 
   $username = $_POST['username'];
@@ -13,12 +13,12 @@
     $hashed_password = $result['password'];
     $password = $_POST['password'];
     if(password_verify($password,$hashed_password)){
-      return "true";
+      echo 'true';
     }
-    else return "false";
+    else echo 'false';
   }
 
   else{
-    return "false";
+    echo 'false';
   }
 ?>

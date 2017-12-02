@@ -10,10 +10,10 @@ form.addEventListener('submit', function(event){
   let p = document.getElementById('password').value;
 
   let request = new XMLHttpRequest();
-  request.open("post", "../phpUtils/verifyLoginCombination.php",true);
+  request.open("post", "../phpUtils/verifyLoginCombination.php",false);
   request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
   request.onreadystatechange = function(){
-    if (request.readyState == 4){
+    if (request.readyState == XMLHttpRequest.DONE){
         if(request.responseText == "false")
         {
           document.getElementById('errors').innerHTML = 'Wrong username/passord combination!\n';

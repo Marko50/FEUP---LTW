@@ -1,5 +1,5 @@
 <?php
-  include_once('config.php');
+  include_once('../phpUtils/config.php');
   $username= $_POST['username'];
   global $dbh;
   $stmt = $dbh->prepare('SELECT * FROM user WHERE username = ?');
@@ -7,6 +7,10 @@
 
   $result = $stmt->fetch();
   if($result == false)
-    return "false";
-  else return "true";
+  {
+    echo 'false';
+  }
+  else {
+    echo 'true';
+  }
 ?>

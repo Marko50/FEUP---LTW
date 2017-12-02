@@ -22,9 +22,9 @@ form.addEventListener('submit', function(event){
   }
   let usern = document.getElementById('username').value;
   let requestUsername = new XMLHttpRequest();
-  requestUsername.open("post", "../phpUtils/verifyUsernameExistance.php",true);
+  requestUsername.open("post", "../phpUtils/verifyUsernameExistance.php",false);
   requestUsername .onreadystatechange = function(){
-    if (requestUsername .readyState == 4){
+    if (requestUsername .readyState == XMLHttpRequest.DONE){
         if(requestUsername.responseText == "true")
         {
           document.getElementById('errors').innerHTML = 'Username already exists!\n';
@@ -39,9 +39,9 @@ form.addEventListener('submit', function(event){
 
   let em = document.getElementById('email').value;
   let requestEmail = new XMLHttpRequest();
-  requestEmail.open("post", "../phpUtils/verifyEmailExistance.php",true);
+  requestEmail.open("post", "../phpUtils/verifyEmailExistance.php",false);
   requestEmail.onreadystatechange = function(){
-    if (requestEmail.readyState == 4){
+    if (requestEmail.readyState == XMLHttpRequest.DONE){
         if(requestEmail.responseText == "true")
         {
           document.getElementById('errors').innerHTML = 'Email already exists!\n';
