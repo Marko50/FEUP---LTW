@@ -7,7 +7,7 @@
       <meta charset="utf-8">
   </head>
   <body>
-    <div class="loginform" action="../phpUtils/login.php">
+    <div class="form" action="../phpUtils/login.php">
       <h3> Login information</h3>
       <form method="post" action="../phpUtils/login.php">
         Username <input type="text" name="username" id="username">

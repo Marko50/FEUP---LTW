@@ -8,8 +8,8 @@
   </head>
   <body>
     <h1> CREATING AN ACCOUNT</h1>
-    <div class="registerform">
-      <h3> Account information</h3>
+    <div class="form">
+      <h3> Edit Profile </h3>
       <form action="../phpUtils/register.php" method="post">
         Full Name <input type="text" name="FullName" id="FullName" maxlength="50" required>
         Email <input type="email" name="email" id="email" maxlength="30" required>

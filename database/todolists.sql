@@ -10,7 +10,7 @@ CREATE TABLE user (
 	userID INTEGER PRIMARY KEY AUTOINCREMENT,
   username VARCHAR NOT NULL UNIQUE,
 	fullName VARCHAR,
-  email VARCHAR,
+  email VARCHAR UNIQUE,
 	birthdate VARCHAR,
 	gender VARCHAR,
   password VARCHAR NOT NULL
