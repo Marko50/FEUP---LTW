@@ -25,7 +25,12 @@
               <p> THINGS </p>
               <footer>';
           echo $todolist["likes"];
-          echo' likes
+          echo' likes';
+          echo '<form action="todolistoptions.php" method="post">
+            <input> type="hidden" name="todolistid" value="';
+          echo $todolist['todoListID'];
+          echo '" </input>
+          </form>
               </footer>
           </section>';
         }
