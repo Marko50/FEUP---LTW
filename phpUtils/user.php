@@ -14,4 +14,26 @@
     return $result;
   }
 
+  function getUserTodoLists($username){
+    global $dbh;
+    $stmt = $dbh->prepare('SELECT userID FROM user WHERE username = ?');
+    if($stmt == false){
+      print_r($dbh->errorInfo());
+      die("SQLITE ERROR");
+    }
+    $stmt->execute(array($username));
+    $id = $stmt->fetch(PDO::FETCH_ASSOC);
+
+    $stmt = $dbh->prepare('SELECT * FROM todolist WHERE uID = ?');
+    if($stmt == false){
+      print_r($dbh->errorInfo());
+      die("SQLITE ERROR");
+    }
+    $stmt->execute(array($id));
+
+    $result = $stmt->fetchAll();
+
+    return $result;
+  }
+
  ?>

@@ -1,5 +1,7 @@
 CREATE TABLE todolist(
   todoListID INTEGER PRIMARY KEY AUTOINCREMENT,
+  title VARCHAR NOT NULL,
+  category VARCHAR NOT NULL,
   likes INTEGER,
   uID INTEGER REFERENCES user(userID)
 );
@@ -7,13 +9,14 @@ CREATE TABLE todolist(
 CREATE TABLE item(
   itemID INTEGER PRIMARY KEY AUTOINCREMENT,
   description TEXT NOT NULL,
+  limitDate VARCHAR,
   completed BOOLEAN
 );
 
 CREATE TABLE todolistitem(
-  iID REFERENCES item (itemID),
-  tID REFERENCES todolist (todoListID),
-  PRIMARY KEY(itemID, todoListID)
+  iID REFERENCES item(itemID),
+  tID REFERENCES todolist(todoListID),
+  PRIMARY KEY(iID, tID)
 );
 
 CREATE TABLE user (
@@ -29,7 +32,7 @@ CREATE TABLE user (
 CREATE TABLE comments (
 	commentID INTEGER PRIMARY KEY AUTOINCREMENT,
 	comment TEXT,
-	date VARCHAR,
+	commenteDate VARCHAR,
 	likes INTEGER,
   uID INTEGER REFERENCES user(userID),
   lID INTEGER REFERENCES todolist(todoListID)

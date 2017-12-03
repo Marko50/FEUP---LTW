@@ -20,7 +20,7 @@
         Female <input type="radio" name ="gender" value="Female">
         Rather Not Say <input type="radio" name ="gender" value="None" checked="checked">
         Birthdate <input type="date" name="birthdate" value="1997-04-09" required>
-        <input type="submit" value="Send" >
+        <input type="submit" value="Sign Up" >
       </form>
     </div>
     <div id="errors" class="error-forms"role="alert">

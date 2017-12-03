@@ -12,7 +12,7 @@
       <form method="post" action="../phpUtils/login.php">
         Username <input type="text" name="username" id="username">
         Password <input type="password" name="password" id="password">
-        <input type="submit" value="Send" >
+        <input type="submit" value="Sign In" >
       </form>
     </div>
     <div id="errors" class="error-forms" role="alert">
