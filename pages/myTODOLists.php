@@ -18,8 +18,9 @@
        <?php
         foreach ($user_todolists as $todolist){
           echo '<section class="todolist">
-              <h3 > $todolist["title"] </h3>
-              <aside>';
+              <h3>';
+          echo $todolist["title"];
+          echo '</h3>    <aside>';
           echo $todolist["category"];
           echo '</aside>
               <p> THINGS </p>
@@ -29,7 +30,7 @@
           echo '<form action="todolistoptions.php" method="post">
             <input type="hidden" name="todolistid" value="';
           echo $todolist['todoListID'];
-          echo'">'
+          echo'">';
           echo ' <input type="submit" value="View TODO LIST" >
           </form>
               </footer>

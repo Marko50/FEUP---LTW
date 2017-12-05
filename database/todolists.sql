@@ -10,13 +10,8 @@ CREATE TABLE item(
   itemID INTEGER PRIMARY KEY AUTOINCREMENT,
   description TEXT NOT NULL,
   limitDate VARCHAR,
-  completed BOOLEAN
-);
-
-CREATE TABLE todolistitem(
-  iID REFERENCES item(itemID),
-  tID REFERENCES todolist(todoListID),
-  PRIMARY KEY(iID, tID)
+  completed BOOLEAN,
+  tdID INTEGER REFERENCES todolist(todoListID)
 );
 
 CREATE TABLE user (

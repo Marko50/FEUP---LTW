@@ -13,10 +13,10 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <script src="../js/additemvalidator.js" defer></script>
     <title> TODO LIST OPTIONS </title>
   </head>
   <body>
-    <h1> LAMA TOES</h1>
     <section class="todolistinformation">
       <h3>  Title <?php echo $todolist['title']; ?> </h3>
       <p> Category <?php  echo $todolist['category']; ?> </p>
@@ -28,28 +28,24 @@
           else{
             echo 'To do untill ';
             echo $item['limitDate'];
-            echo ' :';
+            echo ' : ';
           }
-          echo $item['desciption'];
+          echo $item['description'];
           echo '</p>';
         } ?>
       </section>
       <div class="form">
-        <form action="../phpUtils/additem.php" method="post">
-          <input type="text" id="itemtext" required>
-          Due Limit: <input type="date" id="datelimit" value="1997-04-09" required>
-          <input type="submit" value="Sign Up" >
+        <form>
+          <input type="hidden" name="todolistid" id="todolistid" value= "<?php echo $id;?>">
+          <input type="text" name="itemtext" id="itemtext" required>
+          Due Limit: <input type="date" name ="datelimit" id="datelimit" value="1997-04-09" required>
+          <input type="submit" value="Add a new Item!" >
         </form>
       </div>
       <div id="errors" class="error-forms"role="alert">
 
       </div>
       <p> Likes <?php echo $todolist['likes'];  ?> </p>
-    </div>
-    <div class="form">
-      <form action="" method="post">
-        <input type="text" name="itemtext" required/>
-      </form>
     </div>
   </body>
 </html>
