@@ -12,5 +12,11 @@ form.addEventListener('submit', function(event){
     return false;
   }
 
-  let items = document.getElementsByTagName('div')[0];
+  let node = document.createElement("DIV");
+  let description = document.getElementById('itemtext').value;
+  let limitdate = document.getElementById('datelimit').value;
+  node.innerHTML = '<p> To do untill ' + limitdate + ': ' + desciption + '</p>';
+  let items = document.getElementsByTagName('section')[0];
+  items.appendChild(node);
+  return true;
 });

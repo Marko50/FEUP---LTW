@@ -16,11 +16,13 @@
     <title> TODO LIST OPTIONS </title>
   </head>
   <body>
-    <div class="todolistinformation">
+    <h1> LAMA TOES</h1>
+    <section class="todolistinformation">
       <h3>  Title <?php echo $todolist['title']; ?> </h3>
       <p> Category <?php  echo $todolist['category']; ?> </p>
-      <div class="">
+      <div class="todolist">
         <?php foreach ($items as $item) {
+          echo'<p>';
           if($item['completed'])
             echo 'Completed: ';
           else{
@@ -29,12 +31,13 @@
             echo ' :';
           }
           echo $item['desciption'];
+          echo '</p>';
         } ?>
-      </div>
+      </section>
       <div class="form">
         <form action="../phpUtils/additem.php" method="post">
           <input type="text" id="itemtext" required>
-          Due Limit: <input type="date" name="datelimit" value="1997-04-09" required>
+          Due Limit: <input type="date" id="datelimit" value="1997-04-09" required>
           <input type="submit" value="Sign Up" >
         </form>
       </div>
