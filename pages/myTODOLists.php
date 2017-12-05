@@ -27,9 +27,10 @@
           echo $todolist["likes"];
           echo' likes';
           echo '<form action="todolistoptions.php" method="post">
-            <input> type="hidden" name="todolistid" value="';
+            <input type="hidden" name="todolistid" value="';
           echo $todolist['todoListID'];
-          echo '" </input>
+          echo'">'
+          echo ' <input type="submit" value="View TODO LIST" >
           </form>
               </footer>
           </section>';
