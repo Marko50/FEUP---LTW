@@ -24,8 +24,12 @@
         <?php foreach ($items as $item) {
           echo'<p>';
           if($item['completed'])
+          {
+            echo '<input type="checkbox" class="checkboxitem" checked value =' . $item['itemID'] . ' > </input>';
             echo 'Completed: ';
+          }
           else{
+          echo '<input type="checkbox" class="checkboxitem" value =' . $item['itemID'] . ' > </input>';
             echo 'To do untill ';
             echo $item['limitDate'];
             echo ' : ';
@@ -40,6 +44,11 @@
           <input type="text" name="itemtext" id="itemtext" required>
           Due Limit: <input type="date" name ="datelimit" id="datelimit" value="1997-04-09" required>
           <input type="submit" value="Add a new Item!" >
+        </form>
+      </div>
+      <div class="form">
+        <form action="myTODOLists.php" method="post">
+          <input type="submit" value="SAVE" >
         </form>
       </div>
       <div id="errors" class="error-forms"role="alert">

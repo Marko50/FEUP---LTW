@@ -10,7 +10,7 @@ CREATE TABLE item(
   itemID INTEGER PRIMARY KEY AUTOINCREMENT,
   description TEXT NOT NULL,
   limitDate VARCHAR,
-  completed BOOLEAN,
+  completed INTEGER,
   tdID INTEGER REFERENCES todolist(todoListID)
 );
 

@@ -11,5 +11,5 @@
       print_r($dbh->errorInfo());
       die("SQLITE ERROR");
     }
-    $stmt->execute(array($description, $limitdate, false, $tdID));
+    $stmt->execute(array($description, $limitdate, 0, $tdID));
  ?>

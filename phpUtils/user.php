@@ -29,7 +29,7 @@
       print_r($dbh->errorInfo());
       die("SQLITE ERROR");
     }
-    $stmt->execute(array($id));
+    $stmt->execute(array($id['userID']));
 
     $result = $stmt->fetchAll();
 

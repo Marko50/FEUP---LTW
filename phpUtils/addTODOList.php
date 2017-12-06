@@ -19,7 +19,7 @@
     print_r($dbh->errorInfo());
     die("SQLITE ERROR");
   }
-  $stmt->execute(array($title, $category, 0, $id));
+  $stmt->execute(array($title, $category, 0, $id['userID']));
 
   header("Location: ../pages/myTODOLists.php");
  ?>
