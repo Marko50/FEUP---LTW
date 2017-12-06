@@ -27,14 +27,22 @@ form.addEventListener('submit', function(event) {
   let limitdate = document.getElementById('datelimit').value;
   let tdID = document.getElementById('todolistid').value;
   let itemRequest = new XMLHttpRequest();
+  itemRequest.onreadystatechange = function(){
+    if (itemRequest.readyState == XMLHttpRequest.DONE){
+        let lastid = parseInt(itemRequest.responseText) + 1;
+        let node = document.createElement("DIV");
+        node.innerHTML = '<p> <input type="checkbox" class="checkboxitem" value ='
+        + lastid + ' > </input> To do untill '
+         + limitdate + ': ' + description +
+        '</p>';
+        let items = document.getElementsByTagName('section')[0];
+        items.appendChild(node);
+        event.preventDefault();
+    }
+  }
   itemRequest.open("post", "../phpUtils/additem.php", false);
   itemRequest.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
   itemRequest.send(encodeForAjax({todolistid: tdID, itemtext: description, datelimit: limitdate}));
-  let node = document.createElement("DIV");
-  node.innerHTML = '<p> To do untill ' + limitdate + ': ' + description + '</p>';
-  let items = document.getElementsByTagName('section')[0];
-  items.appendChild(node);
-  event.preventDefault();
   return true;
 });
 

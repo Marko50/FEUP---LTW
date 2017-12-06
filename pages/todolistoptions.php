@@ -29,7 +29,7 @@
             echo 'Completed: ';
           }
           else{
-          echo '<input type="checkbox" class="checkboxitem" value =' . $item['itemID'] . ' > </input>';
+            echo '<input type="checkbox" class="checkboxitem" value =' . $item['itemID'] . ' > </input>';
             echo 'To do untill ';
             echo $item['limitDate'];
             echo ' : ';

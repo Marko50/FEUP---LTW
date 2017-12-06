@@ -12,4 +12,13 @@
       die("SQLITE ERROR");
     }
     $stmt->execute(array($description, $limitdate, 0, $tdID));
+
+    $stmt = $dbh->prepare('SELECT MAX(itemID) FROM item');
+    if($stmt == false){
+      print_r($dbh->errorInfo());
+      die("SQLITE ERROR");
+    }
+    $lastid = $stmt->execute();
+
+    echo $lastid;
  ?>
