@@ -1,0 +1,125 @@
+html{
+  font-size:100%;
+}
+
+
+.LoginAndRegister {
+  padding-right: 1.5em;
+  text-align: right;
+  border-top:1em;
+  height: 0em;
+  font-size: 1rem;
+  font-family: "Lucida Console", Monospace;
+  color: #000000;
+  background-color: #FFFFFF;
+  color:inherit;
+}
+
+.LoginAndRegister :nth-child(2){
+    text-decoration:none;
+
+  }
+
+  .LoginAndRegister :nth-child(2):after{
+    color: #000000;
+    content:"|";
+    }
+
+    .LoginAndRegister :nth-child(3){
+      text-decoration:none;
+      }
+
+
+.menu {
+
+  height: 1.5em;
+  border-bottom: 5px solid #f20456;
+  font-size: 1.6rem;
+  font-family: "Lucida Console", Monospace;
+  color: #040404;
+  text-decoration:none;
+}
+
+
+.menu a:nth-child(1):before{
+  padding:1em;
+
+}
+.menu a:nth-child(2):before{
+  padding:1em;
+  content:"|";
+
+}
+
+.menu a:nth-child(3):before{
+  padding:1em;
+  content:"|";
+
+}
+.menu a:nth-child(1){
+    text-decoration: none;
+  }
+.menu a:nth-child(2){
+      text-decoration: none;
+    }
+.menu a:nth-child(3){
+    text-decoration: none;
+  }
+
+ h1 {
+    padding-left: 1.5em;
+    font-size: 1.6rem;
+    font-family: "Lucida Console", Monospace;
+    color: #4b2366;
+  }
+
+  .form{
+    padding-left: 1.5em;
+    color: #4b2366;
+    font-family: "Lucida Console", Monospace;
+  }
+
+  footer{
+    text-align: right;
+    padding-right: 1.5em;
+    color: #4b2366;
+    font-family: "Lucida Console", Monospace;
+  }
+
+
+  h3 {
+     padding-left: 2em;
+     font-size: 1.2rem;
+     font-family: "Lucida Console", Monospace;
+     color: #f20457;
+   }
+
+   p {
+     padding-left: 2.3em;
+     font-size: 1rem;
+     font-family: "Lucida Console", Monospace;
+     color: #792d87;
+   }
+
+   .button {
+    margin-left: 9em;
+    background-color: #f20457; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+.button2 {
+ background-color: #f20457; /* Green */
+ border: none;
+ color: white;
+ padding: 15px 32px;
+ text-align: center;
+ text-decoration: none;
+ display: inline-block;
+ font-size: 16px;
+}
