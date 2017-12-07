@@ -2,7 +2,7 @@
   include_once('config.php');
 
     $tdID = $_POST['todolistid'];
-    $description = $_POST['itemtext'];
+    $description = htmlspecialchars($_POST['itemtext']);
     $limitdate = $_POST['datelimit'];
 
     global $dbh;

@@ -2,7 +2,7 @@
   session_start();
   include_once('config.php');
 
-  $title = $_POST['title'];
+  $title = htmlspecialchars($_POST['title']);
   $category = $_POST['category'];
 
   global $dbh;

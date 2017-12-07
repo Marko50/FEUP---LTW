@@ -23,7 +23,6 @@
           echo '</h3>    <aside>';
           echo $todolist["category"];
           echo '</aside>
-              <p> THINGS </p>
               <footer>';
           echo $todolist["likes"];
           echo' likes';

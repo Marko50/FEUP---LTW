@@ -1,6 +1,6 @@
 <?php
   session_start();
-  $username = $_POST['username'];
+  $username = htmlspecialchars($_POST['username']);
   $_SESSION['login-user']= $username;
   unset($_SESSION["ERROR"]);
 

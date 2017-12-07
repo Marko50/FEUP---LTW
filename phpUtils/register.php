@@ -1,10 +1,9 @@
 <?php
     include_once('config.php');
-    $username = $_POST['username'];
-    $email = $_POST['email'];
-    $fullname = $_POST['FullName'];
-    $password = $_POST['password'];
-    $username = $_POST['username'];
+    $username = htmlspecialchars($_POST['username']);
+    $email = htmlspecialchars($_POST['email']);
+    $fullname = htmlspecialchars($_POST['FullName']);
+    $password = htmlspecialchars($_POST['password']);
     $birthdate = $_POST['birthdate'];
     $gender = $_POST['gender'];
 
