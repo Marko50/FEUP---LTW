@@ -1,5 +1,6 @@
 <?php
   session_start();
+  session_regenerate_id(true);
   include_once('../phpUtils/user.php');
   include_once('topBar.php');
   $_SESSION['csrf'] = generate_random_token();

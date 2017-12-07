@@ -1,5 +1,6 @@
 <?php
   session_start();
+  session_regenerate_id(true);
   include_once('topBar.php');
   include_once('../phpUtils/todoList.php');
   include_once('../phpUtils/user.php');
