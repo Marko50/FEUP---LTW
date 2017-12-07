@@ -32,8 +32,14 @@
           echo $todolist['todoListID'];
           echo'">';
           echo ' <input type="submit" value="View TODO LIST" >
-          </form>
-              </footer>
+          </form>';
+          echo '<form action="../phpUtils/removelist.php" method="post">
+            <input type="hidden" name="todolistid" value="';
+          echo $todolist['todoListID'];
+          echo'">';
+          echo ' <input type="submit" value="DELETE" >
+          </form>';
+          echo'</footer>
           </section>';
         }
       ?>
