@@ -1,7 +1,9 @@
 <?php
   session_start();
   include_once('config.php');
-
+  if ($_SESSION['csrf'] != $_POST['csrf']) {
+    die("ERROR: Request does not appear to be legitimate");
+  }
   $title = htmlspecialchars($_POST['title']);
   $category = $_POST['category'];
 

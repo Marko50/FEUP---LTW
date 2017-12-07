@@ -1,6 +1,8 @@
 <?php
   session_start();
-  include_once 'topBar.php'
+  include_once('topBar.php');
+  include_once('../phpUtils/user.php');
+  $_SESSION['csrf'] = generate_random_token();
 
 ?>
 
@@ -13,8 +15,9 @@
   <body>
     <div class="form">
       <h3> CREDENTIALS </h3>
-      <P> As a security manager you have to enter your credentials again to change any account information!</P>
+      <P> As a security measure you have to enter your credentials again to change any account information!</P>
       <form method="post" action="editprofile.php">
+        <input type="hidden" name="csrf" value="<?php echo $_SESSION['csrf']?>">
         Username <input type="text" name="username" id="username">
         Password <input type="password" name="password" id="password">
         <input type="submit" value="Send" >

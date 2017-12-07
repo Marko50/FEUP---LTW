@@ -1,11 +1,14 @@
 <?php
   session_start();
-  include_once ('topBar.php');
-  include_once ('../phpUtils/todoList.php');
+  include_once('topBar.php');
+  include_once('../phpUtils/todoList.php');
+  include_once('../phpUtils/user.php');
 
   $id = $_POST['todolistid'];
   $todolist = gettodolistinfo($id);
   $items = gettodolistitems($id);
+
+  $_SESSION['csrf'] = generate_random_token();
  ?>
 
 
@@ -40,6 +43,7 @@
       </section>
       <div class="form">
         <form>
+          <input type="hidden" name="csrf" value="<?php echo $_SESSION['csrf'] ?>">
           <input type="hidden" name="todolistid" id="todolistid" value= "<?php echo $id;?>">
           <input type="text" name="itemtext" id="itemtext" required>
           Due Limit: <input type="date" name ="datelimit" id="datelimit" value="1997-04-09" required>

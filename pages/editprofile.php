@@ -3,6 +3,7 @@
     include_once ('topBar.php');
     include_once ('../phpUtils/user.php');
     $user_info = getUserInfo($_SESSION['login-user']);
+    $_SESSION['csrf'] = generate_random_token();
  ?>
 
  <!DOCTYPE html>
@@ -17,6 +18,7 @@
      <div class="form">
        <h3> Account information</h3>
        <form action="../phpUtils/edituserprofile.php" method="post">
+         <input type="hidden" name="csrf" value="<?php echo $_SESSION['csrf'] ?>">
          Full Name <input type="text" name="FullName" value="<?php echo $user_info['fullName'] ?>" id="FullName" maxlength="50" required>
          Email <input type="email" name="email" value="<?php echo $user_info['email'] ?>" id="email" maxlength="30" required>
          <input type="hidden" name="username" value="<?php echo $user_info['username'] ?>" id="username" maxlength="15" required>

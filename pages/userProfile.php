@@ -1,7 +1,7 @@
 <?php
   session_start();
-  include_once ('topBar.php');
-  include_once ('../phpUtils/user.php');
+  include_once('topBar.php');
+  include_once('../phpUtils/user.php');
   $user_info = getUserInfo($_SESSION['login-user']);
  ?>
 

@@ -1,6 +1,8 @@
 <?php
-  include_once('config.php');
-
+    include_once('config.php');
+    if ($_SESSION['csrf'] != $_POST['csrf']) {
+      die("ERROR: Request does not appear to be legitimate");
+    }
     $tdID = $_POST['todolistid'];
     $description = htmlspecialchars($_POST['itemtext']);
     $limitdate = $_POST['datelimit'];

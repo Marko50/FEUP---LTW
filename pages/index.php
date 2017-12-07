@@ -1,6 +1,6 @@
 <?php
   session_start();
-  include_once 'topBar.php'
+  include_once('topBar.php');
 ?>
 
 <html>
@@ -8,7 +8,7 @@
     <title> TO DO LISTS </title>
     <meta charset="utf-8">
   </head>
-  <body>  
+  <body>
     <h1> WHAT ARE TODO Lists</h1>
     <div>
       <h3> THE IDEA</h3>

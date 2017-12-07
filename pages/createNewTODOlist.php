@@ -1,6 +1,9 @@
 <?php
   session_start();
-  include_once ('topBar.php');
+  include_once('../phpUtils/user.php');
+  include_once('topBar.php');
+  $_SESSION['csrf'] = generate_random_token();
+
  ?>
 
  <!DOCTYPE html>
@@ -16,6 +19,7 @@
       </h1>
       <div class="form">
         <form action="../phpUtils/addTODOList.php" method="post">
+            <input type="hidden" name="csrf" value="<?php echo $_SESSION['csrf']?>">
             <input type="text" name="title" id="title" maxlength="40" required />
             <select name="category">
               <option value="generic"> No specific category </option>
