@@ -4,6 +4,13 @@ function encodeForAjax(data) {
   }).join('&');
 }
 
+var buttonlistener = function(itemID) {
+  let itemChangeRequest = new XMLHttpRequest();
+  itemChangeRequest.open("post", "../phpUtils/changeitem.php", false);
+  itemChangeRequest.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+  itemChangeRequest.send(encodeForAjax({itemID: itemID}));
+}
+
 let form = document.getElementsByTagName('form')[0];
 form.addEventListener('submit', function(event) {
   let date = document.getElementById("datelimit").value;
@@ -29,12 +36,15 @@ form.addEventListener('submit', function(event) {
   let itemRequest = new XMLHttpRequest();
   itemRequest.onreadystatechange = function(){
     if (itemRequest.readyState == XMLHttpRequest.DONE){
-        let lastid = parseInt(itemRequest.responseText) + 1;
+        let lastid = parseInt(itemRequest.responseText);
         let node = document.createElement("DIV");
         node.innerHTML = '<p> <input type="checkbox" class="checkboxitem" value ='
         + lastid + ' > </input> To do untill '
          + limitdate + ': ' + description +
         '</p>';
+        node.addEventListener('click', function() {
+          buttonlistener(lastid);
+        });
         let items = document.getElementsByTagName('section')[0];
         items.appendChild(node);
         event.preventDefault();
@@ -46,13 +56,7 @@ form.addEventListener('submit', function(event) {
   return true;
 });
 
-var buttonlistener = function(itemID) {
-  let itemChangeRequest = new XMLHttpRequest();
-  itemChangeRequest.open("post", "../phpUtils/changeitem.php", false);
-  itemChangeRequest.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-  itemChangeRequest.send(encodeForAjax({itemID: itemID}));
 
-}
 let buttons = document.getElementsByClassName("checkboxitem");
 
 for (let i = 0; i < buttons.length; i++) {

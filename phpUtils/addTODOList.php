@@ -16,12 +16,12 @@
   $stmt->execute(array($_SESSION['login-user']));
   $id = $stmt->fetch(PDO::FETCH_ASSOC);
 
-  $stmt = $dbh->prepare('INSERT INTO todolist (title, category, likes, uID) VALUES (?,?,?,?)');
+  $stmt = $dbh->prepare('INSERT INTO todolist (title, category, uID) VALUES (?,?,?)');
   if($stmt == false){
     print_r($dbh->errorInfo());
     die("SQLITE ERROR");
   }
-  $stmt->execute(array($title, $category, 0, $id['userID']));
+  $stmt->execute(array($title, $category, $id['userID']));
 
   header("Location: ../pages/myTODOLists.php");
  ?>

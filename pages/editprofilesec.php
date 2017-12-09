@@ -19,6 +19,7 @@
       <P> As a security measure you have to enter your credentials again to change any account information!</P>
       <form method="post" action="editprofile.php">
         <input type="hidden" name="csrf" value="<?php echo $_SESSION['csrf']?>">
+        <input type="hidden" name="verify" value="true"/>
         Username <input type="text" name="username" id="username">
         Password <input type="password" name="password" id="password">
         <input type="submit" value="Send" >

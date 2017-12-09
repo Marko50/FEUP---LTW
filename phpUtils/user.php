@@ -9,7 +9,15 @@
   function getUserInfo($username){
     global $dbh;
     $stmt = $dbh->prepare('SELECT * FROM user WHERE username = ?');
-    $stmt->execute(array($username));
+    $verf = $stmt->execute(array($username));
+    $result = $stmt->fetch(PDO::FETCH_ASSOC);
+    return $result;
+  }
+
+  function getUserInfoID($id){
+    global $dbh;
+    $stmt = $dbh->prepare('SELECT * FROM user WHERE userID = ?');
+    $stmt->execute(array($id));
     $result = $stmt->fetch(PDO::FETCH_ASSOC);
     return $result;
   }

@@ -15,7 +15,7 @@
    </head>
    <body>
      <h1> All of My Todo Lists </h1>
-     <div id="todolists">
+     <div class="todolists">
        <?php
         foreach ($user_todolists as $todolist){
           echo '<section class="todolist">
@@ -25,8 +25,6 @@
           echo $todolist["category"];
           echo '</aside>
               <footer>';
-          echo $todolist["likes"];
-          echo' likes';
           echo '<form action="todolistoptions.php" method="post">
             <input type="hidden" name="todolistid" value="';
           echo $todolist['todoListID'];

@@ -47,7 +47,7 @@
           <input type="hidden" name="csrf" value="<?php echo $_SESSION['csrf'] ?>">
           <input type="hidden" name="todolistid" id="todolistid" value= "<?php echo $id;?>">
           <input type="text" name="itemtext" id="itemtext" required>
-          Due Limit: <input type="date" name ="datelimit" id="datelimit" value="1997-04-09" required>
+          Due Limit: <input type="date" name ="datelimit" id="datelimit" value="2017-04-09" required>
           <input type="submit" value="Add a new Item!" >
         </form>
       </div>
@@ -57,9 +57,5 @@
         </form>
       </div>
       <div id="errors" class="error-forms"role="alert">
-
-      </div>
-      <p> Likes <?php echo $todolist['likes'];  ?> </p>
-    </div>
   </body>
 </html>

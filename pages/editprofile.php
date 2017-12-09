@@ -1,4 +1,7 @@
 <?php
+    if(!isset($_POST['verify'])){
+      header("Location: editprofilesec.php");
+    }
     session_start();
     session_regenerate_id(true);
     include_once ('topBar.php');

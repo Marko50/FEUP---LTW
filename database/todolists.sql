@@ -2,7 +2,6 @@ CREATE TABLE todolist(
   todoListID INTEGER PRIMARY KEY AUTOINCREMENT,
   title VARCHAR NOT NULL,
   category VARCHAR NOT NULL,
-  likes INTEGER,
   uID INTEGER REFERENCES user(userID)
 );
 
@@ -22,13 +21,4 @@ CREATE TABLE user (
 	birthdate VARCHAR,
 	gender VARCHAR,
   password VARCHAR NOT NULL
-);
-
-CREATE TABLE comments (
-	commentID INTEGER PRIMARY KEY AUTOINCREMENT,
-	comment TEXT,
-	commenteDate VARCHAR,
-	likes INTEGER,
-  uID INTEGER REFERENCES user(userID),
-  lID INTEGER REFERENCES todolist(todoListID)
 );
