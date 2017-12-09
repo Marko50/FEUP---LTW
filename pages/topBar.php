@@ -19,7 +19,6 @@
       <nav>
         <ul>
           <li> <a href= "index.php">  home</a></li>
-          <li> <a href= "example.php"> Example of a TODO List </a></li>
           <li> <a href= "search.php"> Search TODO Lists </a> </li>
         </ul>
       </nav>
