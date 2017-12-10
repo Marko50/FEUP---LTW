@@ -6,30 +6,23 @@
 
 <html>
   <head>
-    <title> TO DO LISTS </title>
+    <title> 2du Home </title>
     <meta charset="utf-8">
+    <link href="../css/style.css" rel="stylesheet" >
   </head>
   <body>
-    <h1> WHAT ARE TODO Lists</h1>
+    <h1> Welcome to 2du!</h1>
     <div>
-      <h3> THE IDEA</h3>
-      <p>
-        Purpose of the TODO Lists.
-      </p>
+      <h5> Here we provide our users with a simple and completely free way to create and manage to-do lists.<br/><br/>
+         We aim to help you plan and maximize the productivitu of your daily life.<br/><br/>
+         Get to planning!
+       </h5>
     </div>
+    <br/>
+    <a href= "howto.php"class=buttonHow>  How to use 2du</a>
+    <br/><br/><br/><br/><br/>
+      <img src="../era11.png" alt="era" class="era1"></a>
 
-    <div>
-      <h3> THE USES</h3>
-      <p> Where can we use them.</p>
-    </div>
-
-    <div>
-      <h3> HOW TO DO THEM?</h3>
-      <p>   Explanation of how to do a todo list </p>
-    </div>
-    <footer>
-      Copyright: TODOLists.org
-    </footer>
   </body>
 
 </html>

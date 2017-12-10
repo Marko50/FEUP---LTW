@@ -8,24 +8,23 @@
 
 <html>
   <head>
-      <title> LOGIN </title>
+      <title> 2du Login </title>
       <script src="../js/loginValidator.js" defer></script>
       <meta charset="utf-8">
   </head>
   <body>
+    <h3>Login Information</h3>
     <div class="form" action="../phpUtils/login.php">
-      <h3> Login information</h3>
       <form method="post" action="../phpUtils/login.php">
         <input type="hidden" name="csrf" value="<?php echo $_SESSION['csrf']?>">
-        Username <input type="text" name="username" id="username">
-        Password <input type="password" name="password" id="password">
-        <input type="submit" value="Sign In" >
+        Username <input type="text" name="username" id="username"><br /><br />
+        Password <input type="password" name="password" id="password"><br /><br />
+          <input type="submit" value="Sign In" class="button">
       </form>
+      <br/><br/>
+      <img src="../era11.png" alt="era" class="era"></a>
     </div>
     <div id="errors" class="error-forms" role="alert">
     </div>
-    <footer>
-      Copyright: TODOLists.org
-    </footer>
   </body>
 </html>

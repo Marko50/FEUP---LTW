@@ -12,28 +12,33 @@
    <head>
      <meta charset="utf-8">
      <script src="../js/todoListValidator.js" defer></script>
-     <title> CREATE A NEW TODO LIST </title>
+     <title> 2du New List </title>
    </head>
    <body>
-      <h1>
-        CREATING A NEW TODO LIST
-      </h1>
+      <h3>
+        New 2du List
+      </h3>
       <div class="form">
         <form action="../phpUtils/addTODOList.php" method="post">
             <input type="hidden" name="csrf" value="<?php echo $_SESSION['csrf']?>">
-            <input type="text" name="title" id="title" maxlength="40" required />
+            New List Name
+            <?php echo "&nbsp;" ?>
+            <input type="text" name="title" id="title" maxlength="40" required /><br /><br />
+            Choose Category
             <select name="category">
-              <option value="generic"> No specific category </option>
-              <option value="lifestyle"> Sports and Healthy Lifestyle</option>
-              <option value="domestic"> Domestic Chores </option>
-              <option value="everyday"> Everyday Chores </option>
-              <option value="academic"> School/College </option>
-              <option value="management"> Corporate </option>
-              <option value="social"> Social </option>
+              <option value="Generic"> No specific category </option>
+              <option value="Lifestyle"> Sports and Healthy Lifestyle</option>
+              <option value="Domestic"> Domestic Chores </option>
+              <option value="Everyday"> Everyday Chores </option>
+              <option value="Academic"> School/College </option>
+              <option value="Management"> Corporate </option>
+              <option value="Social"> Social </option>
             </select>
-            <input type="submit" value="Create" >
+            <br /><br/><input type="submit" value="Create" class="button2" >
         </form>
       </div>
+      <br/><br/>
+      <img src="../era11.png" alt="era" class="era"></a>
 
       <div id="errors" class="error-forms"role="alert">
 

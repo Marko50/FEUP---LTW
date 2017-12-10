@@ -12,16 +12,16 @@
     $userinfo = getUserInfo($_POST['username']);
     $userID = $userinfo['userID'];
   }
-  if(isset($category) && isset($userID) && $category!= "generic"){
+  if(isset($category) && isset($userID) && $category!= "Generic"){
     $lists = gettodolistinfoidcategory($userID, $category);
   }
-  else if(isset($category) && $category != "generic"){
+  else if(isset($category) && $category != "Generic"){
     $lists = gettodolistinfocategory($category);
   }
   else if(isset($userID)){
     $lists = gettodolistinfoid($userID);
   }
-  else if(isset($category) && $category == "generic"){
+  else if(isset($category) && $category == "Generic"){
     $lists = getalltodolists();
   }
   else{
@@ -34,22 +34,24 @@
  <html>
    <head>
      <meta charset="utf-8">
-     <title>Search</title>
+     <title>2du Search</title>
    </head>
    <body>
+     <h3>Search for a 2du List</h3>
      <div class="form">
        <form action="search.php" method="post">
+         Choose Category <?php echo "&nbsp;&nbsp;" ?>
          <select name="category">
-           <option value="generic"> No specific category </option>
-           <option value="lifestyle"> Sports and Healthy Lifestyle</option>
-           <option value="domestic"> Domestic Chores </option>
-           <option value="everyday"> Everyday Chores </option>
-           <option value="academic"> School/College </option>
-           <option value="management"> Corporate </option>
-           <option value="social"> Social </option>
-         </select>
-         Search by Username <input type="text" name="username">
-         <input type="submit" value="Search" >
+           <option value="Generic"> No specific category </option>
+           <option value="Lifestyle"> Sports and Healthy Lifestyle</option>
+           <option value="Domestic"> Domestic Chores </option>
+           <option value="Everyday"> Everyday Chores </option>
+           <option value="Academic"> School/College </option>
+           <option value="Management"> Corporate </option>
+           <option value="Social"> Social </option>
+         </select><br /><br />
+         Search by Username <input type="text" name="username"><br /><br />
+         <input type="submit" value="Search" class="button2">
        </form>
      </div>
     <div class="todolists">
@@ -58,13 +60,14 @@
          $user = getUserInfoID($list['uID']);
          $username = $user['username'];
          echo '<section class="todolist">
-             <h3>';
+             <h4>';
          echo $list["title"];
-         echo ' by ';
+         echo ' - by ';
          echo $username;
-         echo '</h3>    <aside>';
+        echo "&nbsp-&nbsp;";
          echo $list["category"];
-         echo '</aside>';
+         echo ' list';
+         echo '</h4> ';
          $items = gettodolistitems($list['todoListID']);
         foreach ($items as $item) {
           echo'<p>';
@@ -81,9 +84,12 @@
           echo '</p>';
          }
          echo '</section>';
+         echo"<br>";
        }
      ?>
     </div>
+    <br/><br/>
+    <img src="../era11.png" alt="era" class="era"></a>
     <div id="errors" class="error-forms"role="alert">
         <?php if(count($lists) == 0 && (isset($_POST['category'])|| isset($_POST['username']) ) ){
           echo '<p> No results found </p>';

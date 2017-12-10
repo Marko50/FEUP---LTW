@@ -10,28 +10,64 @@ html{
   height: 0em;
   font-size: 1rem;
   font-family: "Lucida Console", Monospace;
-  color: #000000;
   background-color: #FFFFFF;
-  color:inherit;
 }
 
-.LoginAndRegister :nth-child(2){
-    text-decoration:none;
 
-  }
+.LoginBut{
+  transform: translate(-10%,0%);
+  background-color: #f20457; /* Green */
+  border: none;
+  color: white;
+  padding: 10px 24px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+}
 
-  .LoginAndRegister :nth-child(2):after{
-    color: #000000;
-    content:"|";
-    }
+.LoginBut:hover{
+  background-color: purple;
+}
 
-    .LoginAndRegister :nth-child(3){
-      text-decoration:none;
-      }
+.RegisterBut{
+  background-color: #f20457; /* Green */
+  border: none;
+  color: white;
+  padding: 10px 24px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+}
 
+.RegisterBut:hover{
+  background-color: purple;
+}
+
+.ProfileButton{
+  background-color: #4b2366 ; /* Green */
+  border: none;
+  color: white;
+  padding: 10px 24px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 15px;
+}
+
+.ProfileButton:hover{
+  background-color: #f20457;
+}
+
+body{
+background-image: url('../background9.jpeg');
+background-position: left top;
+background-attachment: local;
+}
 
 .menu {
-
+  padding-left: 4em;
   height: 1.5em;
   border-bottom: 5px solid #f20456;
   font-size: 1.6rem;
@@ -39,7 +75,23 @@ html{
   color: #040404;
   text-decoration:none;
 }
+.icon{
+  position: absolute;
+  left: 45px;
+  top:1px;
+}
 
+.era{
+  position: relative;
+  left:-65px;
+  top:-30px;
+}
+
+.era1{
+  display:block;
+  margin:auto;
+  width:40%;
+}
 
 .menu a:nth-child(1):before{
   padding:1em;
@@ -58,17 +110,24 @@ html{
 }
 .menu a:nth-child(1){
     text-decoration: none;
+    color: #4b2366;
   }
 .menu a:nth-child(2){
       text-decoration: none;
+      color: #4b2366;
     }
-.menu a:nth-child(3){
-    text-decoration: none;
-  }
+    .menu a:nth-child(3){
+          text-decoration: none;
+          color: #4b2366;
+        }
+
+
+
+
 
  h1 {
-    padding-left: 1.5em;
-    font-size: 1.6rem;
+    text-align: center;
+    font-size: 1.9rem;
     font-family: "Lucida Console", Monospace;
     color: #4b2366;
   }
@@ -80,19 +139,66 @@ html{
   }
 
   footer{
-    text-align: right;
-    padding-right: 1.5em;
     color: #4b2366;
     font-family: "Lucida Console", Monospace;
+    text-align: right;
+    padding-right: 15px;
   }
+
 
 
   h3 {
      padding-left: 2em;
-     font-size: 1.2rem;
+     font-size: 1.3rem;
      font-family: "Lucida Console", Monospace;
      color: #f20457;
    }
+
+   h4 {
+      padding-left: 2em;
+      font-size: 1rem;
+      font-family: "Lucida Console", Monospace;
+      color: #2c3a5b;
+    }
+
+    h5 {
+       text-align: center;
+       font-size: 1rem;
+       font-family: "Lucida Console", Monospace;
+       color: #2c3a5b;
+
+     }
+
+     h6 {
+       padding-left: 2em;
+        font-size: 1rem;
+        font-family: "Lucida Console", Monospace;
+        color: #2c3a5b;
+
+      }
+
+      table{
+        position: absolute;
+        transform: translate(-50%,0%);
+        left: 50%;
+        border-collapse: collapse;
+      }
+
+      table, td{
+        font-family: "Lucida Console", Monospace;
+        color: #4b2366;
+        border: 1px solid #4b2366;
+        padding:6px;
+      }
+
+
+      tr:nth-child(odd){
+        background-color: #f0f0f0;
+      }
+      tr:nth-child(even){
+        background-color: #ffe2eb;
+      }
+
 
    p {
      padding-left: 2.3em;
@@ -122,4 +228,106 @@ html{
  text-decoration: none;
  display: inline-block;
  font-size: 16px;
+}
+
+.buttonHow {
+  position: absolute;
+  left:50%;
+  transform: translate(-50%,0%);
+ background-color: #f20457; /* Green */
+ border: none;
+ color: white;
+ padding: 15px 32px;
+ text-align: center;
+ text-decoration: none;
+ display: inline-block;
+ font-size: 16px;
+ font-family: "Lucida Console", Monospace;
+ margin: auto;
+}
+
+
+.buttonHow:hover{
+  background-color: purple;
+}
+
+
+.button1:hover{
+  background-color: purple;
+}
+.button2:hover{
+  background-color: purple;
+}
+
+.button3{
+ background-color: #f20457; /* Green */
+ border: none;
+ color: white;
+ padding: 10px 24px;
+ text-align: center;
+ text-decoration: none;
+ display: inline-block;
+ font-size: 12px;
+
+}
+
+.button5{
+ background-color: #f20457; /* Green */
+ border: none;
+ color: white;
+ padding: 8px 20px;
+ text-align: center;
+ text-decoration: none;
+ display: inline-block;
+ font-size: 11px;
+
+}
+
+.buttonDelete:hover{
+  background-color: purple;
+}
+
+.button3:hover{
+  background-color: purple;
+}
+.buttonDelete {
+ background-color: #f20457; /* Green */
+ border: none;
+ color: white;
+ padding: 10px 24px;
+ text-align: center;
+ text-decoration: none;
+ display: inline-block;
+ font-size: 12px;
+
+}
+
+.button3{
+  position: relative;
+  left: 100px;
+  top:-45px;
+}
+
+.buttonDelete{
+  position: relative;
+  left: 10px;
+  top:-167px;
+}
+.actions{
+  font-family: "Lucida Console", Monospace;
+  font-size: 1.2rem;
+  color: #ffffff;
+}
+
+.actions>*{
+
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%,0%);
+}
+
+ul{
+  font-family: "Lucida Console", Monospace;
+  font-size: 1.2rem;
+  color: #ffffff;
 }
