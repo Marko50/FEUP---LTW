@@ -27,7 +27,7 @@
         Back on your user menu, you can manage all your 2du lists with the option "My 2du Lists".<br/>
       </h5>
     </div>
-      <img src="../era11.png" alt="era" class="era1"></a>
+      <img src="../assets/era11.png" alt="era" class="era1"></a>
     <h1> Development Information</h1>
     <h5> Developers:<br/>André Fernandes <br/> Daniela João <br/> João Monteiro <br/><br/>
 This project was developed for the course of LTW in FEUP, 2017

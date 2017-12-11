@@ -17,19 +17,28 @@
     <div class="form">
       <form action="../phpUtils/register.php" method="post">
         <input type="hidden" name="csrf" value="<?php echo $_SESSION['csrf'] ?>">
-        Full Name <input type="text" name="FullName" id="FullName" maxlength="50" required><br /><br />
-        Email <?php echo "&nbsp;&nbsp;&nbsp;&nbsp;" ?><input type="email" name="email" id="email" maxlength="30" required><br /><br />
-        Username <?php echo "&nbsp;" ?><input type="text" name="username" id="username" maxlength="15" required><br /><br />
-        Password <?php echo "&nbsp;" ?><input type="password" name="password" id="password" maxlength="20" required><br /><br />
-        Repeat Password <input type="password" name="password2" id="password2" maxlength="20" required><br /><br />
-        Male <input type="radio" name ="gender" value="Male"><?php echo "&nbsp;&nbsp;&nbsp;&nbsp;" ?>
-        Female <input type="radio" name ="gender" value="Female"><?php echo "&nbsp;&nbsp;&nbsp;&nbsp;" ?>
-        Rather Not Say <input type="radio" name ="gender" value="None" checked="checked"><br /><br />
-        Birthdate <input type="date" name="birthdate" value="1997-04-09" required><br /><br />
-        <input type="submit" value="Sign Up" class="button2" >
+        <label for="FullName">Full Name:</label>
+        <input type="text" name="FullName" id="FullName" maxlength="50" required><br /><br />
+        <label for="email">Email:</label>
+        <?php echo "&nbsp;&nbsp;&nbsp;&nbsp;" ?><input type="email" name="email" id="email" maxlength="30" required><br /><br />
+        <label for="username">Username:</label>
+        <?php echo "&nbsp;" ?><input type="text" name="username" id="username" maxlength="15" required><br /><br />
+        <label for="password">Password:</label>
+        <?php echo "&nbsp;" ?><input type="password" name="password" id="password" maxlength="20" required><br /><br />
+        <label for="password2">Repeat Password:</label>
+        <input type="password" name="password2" id="password2" maxlength="20" required><br /><br />
+        <label for="genderMale"> Male </label>
+        <input type="radio" id="genderMale" name ="gender" value="Male"><?php echo "&nbsp;&nbsp;&nbsp;&nbsp;" ?>
+        <label for="genderFermale"> Female </label>
+        <input type="radio" id="genderFemale" name ="gender" value="Female"><?php echo "&nbsp;&nbsp;&nbsp;&nbsp;" ?>
+        <label for="genderNeutral"> Rather not Say </label>
+        <input type="radio" id="genderNeutral" name ="gender" value="None" checked="checked"><br /><br />
+        <label for="birthdate"> Birthdate:</label>
+        <input type="date" id="birthdate" name="birthdate" value="1997-04-09" required><br /><br />
+        <input type="submit" value="Sign Up" class="button" >
       </form>
       <br/><br/>
-      <img src="../era11.png" alt="era" class="era"></a>
+      <img src="../assets/era11.png" alt="era" class="era"></a>
     </div>
     <div id="errors" class="error-forms"role="alert">
 

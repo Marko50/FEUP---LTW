@@ -21,7 +21,7 @@
     <br/>
     <a href= "howto.php"class=buttonHow>  How to use 2du</a>
     <br/><br/><br/><br/><br/>
-      <img src="../era11.png" alt="era" class="era1"></a>
+      <img src="../assets/era11.png" alt="era" class="era1"></a>
 
   </body>
 

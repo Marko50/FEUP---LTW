@@ -51,7 +51,7 @@
            <option value="Social"> Social </option>
          </select><br /><br />
          Search by Username <input type="text" name="username"><br /><br />
-         <input type="submit" value="Search" class="button2">
+         <input type="submit" value="Search" class="button">
        </form>
      </div>
     <div class="todolists">
@@ -59,7 +59,7 @@
        foreach ($lists as $list){
          $user = getUserInfoID($list['uID']);
          $username = $user['username'];
-         echo '<section class="todolist">
+         echo '<section>
              <h4>';
          echo $list["title"];
          echo ' - by ';
@@ -89,7 +89,7 @@
      ?>
     </div>
     <br/><br/>
-    <img src="../era11.png" alt="era" class="era"></a>
+    <img src="../assets/era11.png" alt="era" class="era"></a>
     <div id="errors" class="error-forms"role="alert">
         <?php if(count($lists) == 0 && (isset($_POST['category'])|| isset($_POST['username']) ) ){
           echo '<p> No results found </p>';

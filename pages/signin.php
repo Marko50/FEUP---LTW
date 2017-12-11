@@ -17,12 +17,14 @@
     <div class="form" action="../phpUtils/login.php">
       <form method="post" action="../phpUtils/login.php">
         <input type="hidden" name="csrf" value="<?php echo $_SESSION['csrf']?>">
-        Username <input type="text" name="username" id="username"><br /><br />
-        Password <input type="password" name="password" id="password"><br /><br />
-          <input type="submit" value="Sign In" class="button">
+        <label for="username">Username:</label>
+        <input type="text" name="username" id="username"><br /><br />
+        <label for="password">Password:</label>
+        <input type="password" name="password" id="password"><br /><br />
+        <input type="submit" value="Sign In" class="button">
       </form>
       <br/><br/>
-      <img src="../era11.png" alt="era" class="era"></a>
+      <img src="../assets/era11.png" alt="era" class="era"></a>
     </div>
     <div id="errors" class="error-forms" role="alert">
     </div>

@@ -20,13 +20,15 @@
       <form method="post" action="editprofile.php">
         <input type="hidden" name="csrf" value="<?php echo $_SESSION['csrf']?>">
         <input type="hidden" name="verify" value="true"/>
-        Username <input type="text" name="username" id="username" ><br/><br/>
-        Password <input type="password" name="password" id="password"><br/><br/>
-        <input type="submit" value="Send" class="button2" >
+        <label for="username">Username:</label>
+        <input type="text" name="username" id="username" ><br/><br/>
+        <label for="password">Password:</label>
+        <input type="password" name="password" id="password"><br/><br/>
+        <input type="submit" value="Send" class="button" >
       </form>
     </div>
     <br/><br/>
-    <img src="../era11.png" alt="era" class="era"></a>
+    <img src="../assets/era11.png" alt="era" class="era"></a>
     <div id="errors" class="error-forms" role="alert">
     </div>
     <footer>

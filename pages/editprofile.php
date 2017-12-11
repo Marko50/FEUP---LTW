@@ -31,7 +31,12 @@
          Female <input type="radio" name ="gender" value="Female">
          Rather Not Say <input type="radio" name ="gender" value="None" checked="checked"><br/><br/>
          Birthdate <input type="date" name="birthdate" value="<?php echo $user_info['birthdate'] ?>" required><br/><br/>
-         <input type="submit" value="Change" class="button2">
+         <input type="submit" value="Change" class="button">
+       </form>
+       <form action="../phpUtils/insertUserPhoto.php" method="post" enctype="multipart/form-data">
+         <input type="hidden" name="csrf" id="csrf" value="<?php echo $_SESSION['csrf']; ?>"/>
+         <input type="file" name="photoId" id="photoId" value="Select image to upload:"><br>
+         <input type="submit" value="Upload Image" name="submit">
        </form>
      </div>
      <div id="errors" class="error-forms"role="alert">

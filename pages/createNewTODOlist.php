@@ -15,17 +15,15 @@
      <title> 2du New List </title>
    </head>
    <body>
-      <h3>
-        New 2du List
-      </h3>
       <div class="form">
+        <h3> New 2du List</h3>
         <form action="../phpUtils/addTODOList.php" method="post">
             <input type="hidden" name="csrf" value="<?php echo $_SESSION['csrf']?>">
-            New List Name
+            <label for="title">New List Name:</label>
             <?php echo "&nbsp;" ?>
             <input type="text" name="title" id="title" maxlength="40" required /><br /><br />
-            Choose Category
-            <select name="category">
+            <label for="category">Choose a Category:</label>
+            <select name="category" id="category">
               <option value="Generic"> No specific category </option>
               <option value="Lifestyle"> Sports and Healthy Lifestyle</option>
               <option value="Domestic"> Domestic Chores </option>
@@ -34,11 +32,11 @@
               <option value="Management"> Corporate </option>
               <option value="Social"> Social </option>
             </select>
-            <br /><br/><input type="submit" value="Create" class="button2" >
+            <br /><br/><input type="submit" value="Create" class="button" >
         </form>
       </div>
       <br/><br/>
-      <img src="../era11.png" alt="era" class="era"></a>
+      <img src="../assets/era11.png" alt="era" class="era"></a>
 
       <div id="errors" class="error-forms"role="alert">
 

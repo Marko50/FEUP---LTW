@@ -17,14 +17,13 @@
       ?>
     </div>
     <a href="index.php" >
-      <img src="../icon.png" alt="icon" class="icon"></a>
+      <img src="../assets/icon.png" alt="icon" class="icon"></a>
     <div class="menu">
       <nav>
         <ul>
-           <a href= "index.php">  Home</a>
+          <a href= "index.php">  Home</a>
           <a href= "search.php"> Search</a>
           <a href="howto.php"> Info</a>
-
         </ul>
       </nav>
     </div>

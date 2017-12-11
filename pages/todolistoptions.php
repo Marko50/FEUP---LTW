@@ -21,12 +21,11 @@
     <title> 2du <?php echo $todolist['title']; ?></title>
   </head>
   <body>
-    <section class="todolistinformation">
-      <h3> <?php echo $todolist['title']; ?> </h3>
-      <h4> <?php  echo $todolist['category']; ?><?php  echo "&nbsp"; ?>List  </h4>
-      <div class="todolist">
+    <h3> <?php echo $todolist['title']; ?> </h3>
+    <h4> <?php  echo $todolist['category']; ?><?php  echo "&nbsp"; ?>List  </h4>
+    <section class="todolist">
         <?php foreach ($items as $item) {
-          echo'<p>';
+          echo'<p class="item">';
           if($item['completed'])
           {
             echo '<input type="checkbox" class="checkboxitem" checked value =' . $item['itemID'] . ' > </input>';
@@ -48,12 +47,10 @@
           <input type="hidden" name="todolistid" id="todolistid" value= "<?php echo $id;?>">
           Task: <input type="text" name="itemtext" id="itemtext" required>
           Due Limit: <input type="date" name ="datelimit" id="datelimit" value="2017-04-09" required>
-          <input type="submit" value="Add New Item"class="button5" >
+          <input type="submit" value="Add New Item"class="button" >
         </form>
-      </div>
-      <div class="form">
         <form action="myTODOLists.php" method="post">
-          <input type="submit" value="Save" class="button2">
+          <input type="submit" value="Save" class="button">
         </form>
       </div>
       <div id="errors" class="error-forms"role="alert">

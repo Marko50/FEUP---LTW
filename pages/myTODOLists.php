@@ -14,33 +14,31 @@
      <title>2du My Lists</title>
    </head>
    <body>
-     <h3> My 2du Lists </h3>
+      <a href= "createNewTODOlist.php" id="addTodoList" class="ProfileButton"> Create a new 2du List </a>
+      <h3> My 2du Lists </h3>
      <div class="todolists">
        <?php
         foreach ($user_todolists as $todolist){
-          echo '<section class="todolist">';
+          echo '<section>';
           echo '  <h4>';
-          echo "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
           echo $todolist["title"];
-          echo "&nbsp;-&nbsp;";
-          echo $todolist["category"];
-          echo "&nbsp;list";
           echo '</h4>';
+          echo'<section class= "todolistoptions">';
           echo '<form action="todolistoptions.php" method="post">
             <input type="hidden" name="todolistid" value="';
           echo $todolist['todoListID'];
           echo'">';
-         echo ' <input type="submit" value="Manage 2du List" class="button3">
+         echo ' <input type="submit" value="Manage 2du List" class="button">
           </form>';
           echo '<form action="../phpUtils/removelist.php" method="post">
             <input type="hidden" name="todolistid" value="';
           echo $todolist['todoListID'];
           echo'">';
-          echo ' <input type="submit" value="Delete" class="buttonDelete"> <img src="../era11.png" alt="icon" class="era">
+          echo ' <input type="submit" value="Delete" class="button">
           </form>';
+          echo '</section>';
           echo'</section>';
         }
-        echo'<a href= "createNewTODOlist.php" id="addTodoList" class="ProfileButton"> Create a new 2du List </a><br /><br />';
       ?>
      </div>
    </body>

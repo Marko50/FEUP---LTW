@@ -61,10 +61,11 @@ html{
 }
 
 body{
-background-image: url('../background9.jpeg');
+background-image: url('../assets/background9.jpeg');
 background-position: left top;
 background-attachment: local;
 }
+
 
 .menu {
   padding-left: 4em;
@@ -133,7 +134,7 @@ background-attachment: local;
   }
 
   .form{
-    padding-left: 1.5em;
+    margin-left: 500px;
     color: #4b2366;
     font-family: "Lucida Console", Monospace;
   }
@@ -145,16 +146,16 @@ background-attachment: local;
     padding-right: 15px;
   }
 
-
-
   h3 {
      padding-left: 2em;
+     text-align: center;
      font-size: 1.3rem;
      font-family: "Lucida Console", Monospace;
      color: #f20457;
    }
 
    h4 {
+     text-align: center;
       padding-left: 2em;
       font-size: 1rem;
       font-family: "Lucida Console", Monospace;
@@ -170,6 +171,7 @@ background-attachment: local;
      }
 
      h6 {
+       text-align: center;
        padding-left: 2em;
         font-size: 1rem;
         font-family: "Lucida Console", Monospace;
@@ -208,27 +210,15 @@ background-attachment: local;
    }
 
    .button {
-    margin-left: 9em;
     background-color: #f20457; /* Green */
     border: none;
     color: white;
     padding: 15px 32px;
     text-align: center;
     text-decoration: none;
-    display: inline-block;
     font-size: 16px;
 }
 
-.button2 {
- background-color: #f20457; /* Green */
- border: none;
- color: white;
- padding: 15px 32px;
- text-align: center;
- text-decoration: none;
- display: inline-block;
- font-size: 16px;
-}
 
 .buttonHow {
   position: absolute;
@@ -251,45 +241,16 @@ background-attachment: local;
   background-color: purple;
 }
 
-
-.button1:hover{
-  background-color: purple;
-}
-.button2:hover{
+.button:hover{
   background-color: purple;
 }
 
-.button3{
- background-color: #f20457; /* Green */
- border: none;
- color: white;
- padding: 10px 24px;
- text-align: center;
- text-decoration: none;
- display: inline-block;
- font-size: 12px;
-
-}
-
-.button5{
- background-color: #f20457; /* Green */
- border: none;
- color: white;
- padding: 8px 20px;
- text-align: center;
- text-decoration: none;
- display: inline-block;
- font-size: 11px;
-
-}
 
 .buttonDelete:hover{
   background-color: purple;
 }
 
-.button3:hover{
-  background-color: purple;
-}
+
 .buttonDelete {
  background-color: #f20457; /* Green */
  border: none;
@@ -302,28 +263,40 @@ background-attachment: local;
 
 }
 
-.button3{
-  position: relative;
-  left: 100px;
-  top:-45px;
-}
-
 .buttonDelete{
   position: relative;
   left: 10px;
   top:-167px;
 }
 .actions{
+  position: relative;
+  margin-left: 350px;
   font-family: "Lucida Console", Monospace;
-  font-size: 1.2rem;
+  font-size: 1.0rem;
   color: #ffffff;
+  display: flex;
+  flex-direction: row;
 }
 
-.actions>*{
+.item{
+  border-style: solid;
+  border-width: thin;
+  margin-right: 350px;
+}
 
-    position: absolute;
-    left: 50%;
-    transform: translate(-50%,0%);
+.todolist{
+  margin-left: 320px;
+  margin-bottom: 50px
+}
+
+.todolists{
+  display:grid;
+  grid-gap: 10px;
+  grid-template-columns: auto auto auto auto;
+}
+
+.todolistoptions{
+  display: flex;
 }
 
 ul{
