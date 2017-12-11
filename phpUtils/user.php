@@ -44,4 +44,8 @@
     return $result;
   }
 
+  function updateUserPhoto($username, $photoId){
+
+  }
+
  ?>

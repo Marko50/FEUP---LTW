@@ -2,6 +2,7 @@
   session_start();
   session_regenerate_id(true);
   include_once('topBar.php');
+  $_SESSION['csrf'] = generate_random_token
 ?>
 
 <html>
