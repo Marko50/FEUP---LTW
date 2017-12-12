@@ -1,17 +1,21 @@
-<?php
-  session_start();
-  session_regenerate_id(true);
-  include_once('topBar.php');
-  include_once('../phpUtils/user.php');
-  $_SESSION['csrf'] = generate_random_token();
-?>
+
 <!DOCTYPE html>
 <html>
   <head>
     <title> 2du New Account </title>
     <script src="../js/registValidator.js" defer></script>
+    <link rel="icon" href="../assets/miniIcon.png" type="image/png"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="utf-8">
   </head>
+
+  <?php
+    session_start();
+    session_regenerate_id(true);
+    include_once('topBar.php');
+    include_once('../phpUtils/user.php');
+    $_SESSION['csrf'] = generate_random_token();
+  ?>
   <body>
     <h3> Creating an Account</h3>
     <div class="form">
@@ -38,7 +42,6 @@
         <input type="submit" value="Sign Up" class="button" >
       </form>
       <br/><br/>
-      <img src="../assets/era11.png" alt="era" class="era"></a>
     </div>
     <div id="errors" class="error-forms"role="alert">
 

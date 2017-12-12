@@ -1,22 +1,26 @@
-<?php
-    if(!isset($_POST['verify'])){
-      header("Location: editprofilesec.php");
-    }
-    session_start();
-    session_regenerate_id(true);
-    include_once ('topBar.php');
-    include_once ('../phpUtils/user.php');
-    $user_info = getUserInfo($_SESSION['login-user']);
-    $_SESSION['csrf'] = generate_random_token();
- ?>
+
 
  <!DOCTYPE html>
  <html>
    <head>
      <meta charset="utf-8">
+     <link rel="icon" href="../assets/miniIcon.png" type="image/png"/>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <script src="../js/registValidator.js" defer></script>
+     <script src="../js/fileUpload.js" defer ></script>
      <title> 2du Edit Profile </title>
    </head>
+   <?php
+       if(!isset($_POST['verify'])){
+         header("Location: editprofilesec.php");
+       }
+       session_start();
+       session_regenerate_id(true);
+       include_once ('topBar.php');
+       include_once ('../phpUtils/user.php');
+       $user_info = getUserInfo($_SESSION['login-user']);
+       $_SESSION['csrf'] = generate_random_token();
+    ?>
    <body>
      <h3> Editing profile</h3>
      <div class="form">
@@ -33,11 +37,16 @@
          Birthdate <input type="date" name="birthdate" value="<?php echo $user_info['birthdate'] ?>" required><br/><br/>
          <input type="submit" value="Change" class="button">
        </form>
+     </div>
+     <br />
+     <br />
+     <br />
+     <div class="form">
        <form action="../phpUtils/insertUserPhoto.php" method="post" enctype="multipart/form-data">
          <input type="hidden" name="csrf" id="csrf" value="<?php echo $_SESSION['csrf']; ?>"/>
-         <input type="file" name="photoId" id="photoId" value="Select image to upload:"><br>
-         <input type="submit" value="Upload Image" name="submit">
-       </form>
+         <input type="file" name="photoId" id="photoId" value="Select image to upload:"  ><br/>
+         <input type="submit" value="Upload Image" name="submit" >
+       </form><br/><br/>
      </div>
      <div id="errors" class="error-forms"role="alert">
 

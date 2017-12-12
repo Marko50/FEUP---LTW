@@ -1,14 +1,18 @@
-<?php
-  session_start();
-  session_regenerate_id(true);
-  include_once('topBar.php');
-?>
+
 
 <html>
   <head>
-    <title> 2du Home </title>
+    <title> 2du Info </title>
+    <link rel="icon" href="../assets/miniIcon.png" type="image/png"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="utf-8">
   </head>
+
+  <?php
+    session_start();
+    session_regenerate_id(true);
+    include_once('topBar.php');
+  ?>
   <body>
     <div>
       <h1> How to use 2du</h1>

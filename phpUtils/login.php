@@ -1,5 +1,6 @@
 <?php
   session_start();
+  include_once('user.php');
   if ($_SESSION['csrf'] != $_POST['csrf']) {
     die("ERROR: Request does not appear to be legitimate");
   }

@@ -1,16 +1,21 @@
-<?php
-  session_start();
-  session_regenerate_id(true);
-  include_once('topBar.php');
-  $_SESSION['csrf'] = generate_random_token
-?>
+
 
 <html>
   <head>
+     <link rel="icon" href="../assets/miniIcon.png" type="image/png"/>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> 2du Home </title>
     <meta charset="utf-8">
     <link href="../css/style.css" rel="stylesheet" >
   </head>
+
+  <?php
+    session_start();
+    session_regenerate_id(true);
+    include_once('../phpUtils/user.php');
+    include_once('topBar.php');
+    $_SESSION['csrf'] = generate_random_token();
+  ?>
   <body>
     <h1> Welcome to 2du!</h1>
     <div>

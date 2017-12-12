@@ -7,7 +7,7 @@ if ($_SESSION['csrf'] != $_POST['csrf']) {
 $_SESSION['csrf'] = generate_random_token();
 
 $username = $_SESSION['login-user'];
-$photoId = "../".$_FILES["photoId"]["name"];
+$photoId = "../assets/".$_FILES["photoId"]["name"];
 
 move_uploaded_file($_FILES["photoId"]["tmp_name"],$photoId);
 
@@ -18,8 +18,8 @@ if($stmt == false){
   print_r($dbh->errorInfo());
   die("SQLITE ERROR");
 }
-  $stmt->execute(array($photoId,$username));
+$stmt->execute(array($photoId,$username));
 
-  header("Location: ../pages/userProfile.php");
-  exit();
- ?>
+header("Location: ../pages/userProfile.php");
+exit();
+?>

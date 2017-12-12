@@ -1,10 +1,11 @@
 <?php
     include_once('../phpUtils/config.php');
   ?>
-<html>
-<head>
+
   <div class ="header">
     <div class="LoginAndRegister" style="color:#000000">
+      <link rel="icon" href="../assets/miniIcon.png" type="image/png">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <link href="../css/style.css" rel="stylesheet" >
       <?php
            if (isset($_SESSION['login-user'])) {
@@ -28,8 +29,3 @@
       </nav>
     </div>
   </div>
-</head>
-<body>
-
-</body>
-</html>
